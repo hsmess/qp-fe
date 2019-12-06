@@ -1,0 +1,50 @@
+@import 'vars';
+
+.pricing-table {
+  display: table;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+  font-size: 15px;
+  line-height: 1;
+
+  @media (min-width: $break-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $break-lg) {
+    //width: 80%;
+  }
+}
+
+.pricing-table__row {
+  display: table-row;
+  position: relative;
+}
+
+.pricing-table__cell {
+  display: table-cell;
+  position: relative;
+  padding: 18px 8px;
+  border-bottom: $feint-border;
+  vertical-align: bottom;
+
+  @media (min-width: $break-md) {
+    padding: 18px 0;
+  }
+}
+
+.pricing-table__cell--bold {
+  font-family: $cera-pro-medium;
+}
+
+.pricing-table__cell--title {
+  font-family: $cera-pro-medium;
+  font-size: 23px;
+  color: $pink;
+
+  @media (min-width: $break-md) {
+    font-size: 30px;
+  }
+}

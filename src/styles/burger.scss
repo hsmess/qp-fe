@@ -1,0 +1,78 @@
+@import 'vars';
+
+.burger {
+  display: flex;
+  position: fixed;
+  top: 0;
+  margin-top: 25px;
+
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+  transform: rotate(45deg) scale(.7) translate(14px, -25px);
+  cursor: pointer;
+
+  .header--in-home & {
+    transform: rotate(45deg) translate(12px, -6px);
+  }
+
+  @media (min-width: $break-md) {
+    transform: rotate(45deg) translate(8px, -8px);
+  }
+}
+
+.burger__line {
+  display: block;
+  position: relative;
+  top: 0;
+  width: 49px;
+  height: 3px;
+  margin: 5px 0;
+  background: $dark;
+  transition: .3s all ease-in;
+
+  .header--white & {
+    background: white;
+  }
+
+  .nav & {
+    background: white;
+  }
+}
+
+.burger__line--1 {
+  .burger--cross & {
+    width: 39px;
+    top: 13px;
+    transform: rotate(90deg);
+  }
+}
+
+.burger__line--2 {
+  .burger--cross & {
+    width: 39px;
+  }
+}
+
+.burger__line--3 {
+  .burger--cross & {
+    width: 39px;
+    top: -13px;
+    transform: rotate(90deg);
+  }
+}
+
+.burger__svg {
+  display: block;
+  position: relative;
+  width: 49px;
+  transform: rotate(45deg);
+  fill: #332f21;
+
+  .header--white & {
+    fill: white;
+  }
+}

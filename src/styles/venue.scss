@@ -1,0 +1,260 @@
+@import 'vars';
+
+.venue__intro-harness {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  @media (min-width: $break-md) {
+    flex-direction: row;
+  }
+}
+
+.venue__description {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+  @media (min-width: $break-md) {
+    width: 85%;
+    margin-top: 50px;
+  }
+
+  @media (min-width: $break-lg) {
+    width: 70%;
+  }
+}
+
+.venue__description-title {
+  display: block;
+  position: relative;
+
+  color: $red;
+  font-family: $cera-stencil-pro-medium;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: .8;
+
+  @media (min-width: $break-md) {
+    font-size: 34px;
+  }
+}
+
+.venue__top-line-info {
+  display: block;
+  position: relative;
+  margin-top: 3px;
+  font-family: $cera-pro-medium;
+
+  @media (min-width: $break-lg) {
+    //font-size: 20px;
+  }
+}
+
+.venue__top-line-info--tick {
+  background: url('../images/tick-pink.svg') left center no-repeat;
+  background-size: 17px;
+  padding-left: 30px;
+}
+
+.venue__info-boxes-harness {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+
+  @media (min-width: $break-md) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $break-lg) {
+    //width: 80%;
+  }
+}
+
+.venue__info-boxes-harness--contact {
+  justify-content: flex-start;
+}
+
+.venue-info-box {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+
+  @media (min-width: $break-640) {
+    width: 48%;
+  }
+
+  @media (min-width: $break-md) {
+    width: 30%;
+
+    .venue__info-boxes-harness--contact & {
+      width: 48%;
+    }
+  }
+}
+
+.venue-info-box__title {
+  display: block;
+  position: relative;
+  padding-bottom: 0;
+  border-bottom: $feint-border;
+  margin-bottom: 15px;
+
+  font-family: $cera-pro-medium;
+  font-size: 21px;
+  color: $pink;
+
+  @media (min-width: $break-md) {
+    font-size: 22px;
+  }
+}
+
+.venue-info-box__tag--tick {
+  background: url('../images/tick-pink.svg') left center no-repeat;
+  background-size: 17px;
+  padding-left: 30px;
+}
+
+.venue-info-box__tag {
+  margin-top:4px;
+}
+
+.venue-contact__title {
+  display: block;
+  position: relative;
+  font-family: $cera-pro-medium;
+}
+
+.venue-contact__link {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  color: $red;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.venue__story {
+  display: block;
+  position: relative;
+  margin: 40px 0 50px;
+}
+
+.venue__similar-venues{
+  margin-bottom: -50px;
+  margin-top: 50px;
+  padding: 50px 0 30px;
+}
+
+.venue__similar-venues-box-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+
+  @media (min-width: $break-md) {
+    margin-top: 20px;
+  }
+}
+
+.venue__similar-venues__title{
+  display: block;
+  position: relative;
+
+  font-family: $cera-stencil-pro-medium;
+  font-size: 30px;
+  color: black;
+
+  @media (min-width: $break-md) {
+    font-size: 38px;
+  }
+}
+
+.print-style-logo{
+  display: none;
+}
+.print-style-title{
+  display: none;
+}
+.venue-configurations__printonly{
+  display: none;
+}
+@media print {
+
+  .venue-info-box{
+    width: 30%;
+  }
+
+  .strip--pad-top-big{
+    display: none;
+  }
+
+  .header{
+    display: none;
+  }
+  .image-carousel-harness{
+    display: none;
+  }
+  .print-style-logo{
+    display: block;
+    padding-top: 30px;
+  }
+  .venue__description-title{
+    display:none;
+  }
+  .tech-spec-print{
+    display: none;
+  }
+  .print-style-title{
+    padding-top: 30px;
+    padding-bottom: -30px;
+    display:block;
+    position: relative;
+
+    color: $red;
+    font-family: $cera-stencil-pro-medium;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: .8;
+
+    @media (min-width: $break-md) {
+      font-size: 34px;
+    }
+  }
+  .venue__similar-venues{
+    margin-top:0;
+  }
+  .venue__story{
+    display: none;
+  }
+  .venue__similar-venues__title{
+    font-family: 'CeraPRO-Medium';
+    font-size: 22px;
+  }
+  .venue-configurations__printonly{
+    display: block;
+    padding-top: 0;
+  }
+  .venue-configurations__tab-pane--img{
+    page-break-inside: avoid;
+  }
+  .configuration-item__item{
+    width: 66%;
+    padding-top: 50px;
+  }
+}

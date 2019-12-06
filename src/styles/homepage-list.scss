@@ -1,0 +1,33 @@
+@import 'vars';
+
+.homepage-list {
+  display: block;
+  position: relative;
+  padding: 20px 0 20px;
+
+  &:first-of-type {
+    padding: 40px 0 20px;
+  }
+
+  .homepage-list__title {
+    display: block;
+    position: relative;
+
+    font-family: $cera-stencil-pro-medium;
+    font-size: 45px;
+    color: $red;
+  }
+
+  .homepage-list__box-list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    @media (min-width: $break-md) {
+      margin-top: 10px;
+    }
+  }
+}

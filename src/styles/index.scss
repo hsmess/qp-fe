@@ -1,0 +1,99 @@
+@import 'vars.scss';
+
+.index__title {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+
+  font-family: $cera-pro-regular;
+  font-size: 22px;
+  color: white;
+  line-height: 1.1;
+  text-shadow: 0 0 30px rgba(0, 0, 0, .95);
+
+  @media (min-width: $break-xsm) {
+    font-size: 26px;
+  }
+
+  @media (min-width: $break-md) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 35px;
+    max-width: 700px;
+  }
+}
+
+.index__dark-layer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(black, .2);
+}
+
+.quicklinks {
+  position: absolute;
+  bottom: 15px;
+
+  @media (min-width: $break-md) {
+    bottom: 40px;
+  }
+}
+
+.quicklinks__inner {
+  display: block;
+  position: relative;
+
+  @media (min-width: $break-md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.quicklinks__link {
+  display: inline-block;
+  position: relative;
+  padding: 6px 5px 4px;
+  border: .5px solid rgba(white, .6);
+  margin-top: 7px;
+  background: white;
+
+  font-family: $cera-stencil-pro-medium;
+  font-size: 20px;
+  color: black;
+  line-height: .9;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(black, .1);;
+      color: white;
+    }
+  }
+
+  @media (min-width: $break-xsm) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $break-md) {
+    display: block;
+    font-size: 26px;
+    padding: 6px 12px 5px;
+    margin-top: auto;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 29px;
+  }
+
+  @media (min-width: 1150px) {
+    font-size: 40px;
+    padding: 2px 12px 0;
+  }
+}

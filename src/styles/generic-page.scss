@@ -1,0 +1,26 @@
+@import 'vars';
+
+.generic-intro {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.generic-intro__title {
+  font-size: 22px;
+}
+.generic-page__styled-title {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+
+  font-family: $cera-stencil-pro-medium;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.generic-page__button{
+  background: $purple;
+  color: white;
+}

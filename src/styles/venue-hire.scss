@@ -1,0 +1,30 @@
+@import 'vars';
+
+.venue-box-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+  @media (min-width: $break-md) {
+    margin-top: 50px;
+  }
+}
+
+.venue-hire-intro {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: $max-text-width;
+  margin: 40px 0;
+}
+
+.venue-hire-intro__title {
+  font-size: 21px;
+
+  @media (min-width: $break-md) {
+    font-size: 22px;
+  }
+}

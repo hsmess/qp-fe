@@ -1,0 +1,47 @@
+@import 'vars';
+
+.breadcrumb {
+  padding: 5px 0;
+  background: $header-bg;
+  opacity: 0;
+  transition: .2s opacity ease-in;
+
+  font-family: $cera-pro-medium;
+  font-size: 16px;
+  color: $dark;
+}
+
+.breadcrumb--fade-in {
+  opacity: 1;
+}
+
+.breadcrumb__container {
+  display: block;
+  position: relative;
+
+  padding: 7px 0 5px;
+  border-top: $feint-border;
+  border-bottom: $feint-border;
+}
+
+.breadcrumb--hidden {
+  visibility: hidden;
+}
+
+.breadcrumb__link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+div.breadcrumb__link {
+  pointer-events: none;
+}

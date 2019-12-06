@@ -1,0 +1,45 @@
+@import 'vars';
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  outline: none;
+  padding: 7px 15px 7px;
+  background: white;
+  cursor: pointer;
+
+  font-family: $cera-pro-medium;
+  font-size: 18px;
+  color: black;
+  line-height: 1;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+}
+
+.button--empty {
+  background: rgba(black, .1);
+  border: 1px solid rgba(white, .6);
+  color: white;
+
+  @media (hover: hover) {
+    &:hover {
+      color: black;
+      background: white;
+    }
+  }
+}
+
+.button--homepage {
+  margin-top: 10px;
+
+  @media (min-width: $break-md) {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,23 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3a5936");
+
+$cera-pro-medium: 'CeraPRO-Medium';
+@font-face {
+  font-family: 'CeraPRO-Medium';
+  src: url('../fonts/3A5936_0_0.eot');
+  src: url('../fonts/3A5936_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3A5936_0_0.woff2') format('woff2'), url('../fonts/3A5936_0_0.woff') format('woff'), url('../fonts/3A5936_0_0.ttf') format('truetype');
+}
+
+$cera-pro-regular: 'CeraPRO-Regular';
+@font-face {
+  font-family: 'CeraPRO-Regular';
+  src: url('../fonts/3A5936_1_0.eot');
+  src: url('../fonts/3A5936_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3A5936_1_0.woff2') format('woff2'), url('../fonts/3A5936_1_0.woff') format('woff'), url('../fonts/3A5936_1_0.ttf') format('truetype');
+}
+
+$cera-stencil-pro-medium: 'CeraStencilPro-Medium';
+@font-face {
+  font-family: 'CeraStencilPro-Medium';
+  src: url('../fonts/3A5936_2_0.eot');
+  src: url('../fonts/3A5936_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3A5936_2_0.woff2') format('woff2'), url('../fonts/3A5936_2_0.woff') format('woff'), url('../fonts/3A5936_2_0.ttf') format('truetype');
+}

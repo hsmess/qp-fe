@@ -1,0 +1,49 @@
+@import 'vars';
+
+.job-listing__title {
+  display: block;
+  position: relative;
+
+  font-family: $cera-stencil-pro-medium;
+  font-size: 45px;
+  color: $red;
+}
+
+.job-listing__list {
+  list-style-type: none;
+  margin: 50px 0 0 0;
+  // margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.job-listing__list-item {
+  margin-bottom: 5px;
+}
+
+.job-listing__list-item::before {
+  content: '→ ';
+}
+
+.job-listing-item-link {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+}
+
+.job-listing-item-link__link {
+  display: inline-block;
+  position: relative;
+
+  color: $red;
+  text-decoration: none;
+  outline: none;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

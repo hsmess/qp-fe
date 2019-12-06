@@ -1,0 +1,62 @@
+@import 'vars';
+
+.story__intro {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+  font-size: 21px;
+
+  @media (min-width: $break-md) {
+    font-size: 22px;
+  }
+}
+
+.story-item {
+  display: block;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0 0;
+
+  &:first-of-type {
+    margin-top: 100px;
+  }
+
+  @media (min-width: $break-lg) {
+    margin-top: 60px;
+  }
+}
+
+.story-item__carousel-harness {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+
+  @media (min-width: $break-lg) {
+    width: 55%;
+    min-height: 350px;
+  }
+}
+
+.story-item__date {
+  display: block;
+  position: relative;
+
+  font-family: $cera-stencil-pro-medium;
+  font-size: 35px;
+  line-height: 1;
+  color: $red;
+}
+
+.story-item__title {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+
+  font-family: $cera-stencil-pro-medium;
+  font-size: 26px;
+  line-height: 1;
+}

@@ -1,0 +1,94 @@
+@import 'vars';
+
+.about-box {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  margin-bottom: 2vh;
+  transition: .1s transform ease-in;
+  text-decoration: none;
+
+  &:nth-child(5n + 1) {
+    background: $pink;
+    border-color: $pink;
+  }
+
+  &:nth-child(5n + 2) {
+    background: $yellow;
+    border-color: $yellow;
+  }
+
+  &:nth-child(5n + 3) {
+    background: $brown;
+    border-color: $brown;
+  }
+
+  &:nth-child(5n + 4) {
+    background: $blue;
+    border-color: $blue;
+  }
+
+  &:nth-child(5n + 5) {
+    background: $purple;
+    border-color: $purple;
+  }
+
+  @media (min-width: $break-md) {
+    width: 49%;
+    padding-top: 49%;
+    margin-bottom: 2%;
+  }
+
+  @media (min-width: $break-lg) {
+    width: 32%;
+    padding-top: 32%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.about-box__inner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+}
+
+.about-box__img-harness {
+  display: block;
+  position: relative;
+}
+
+.about-box__img {
+  display: block;
+  position: relative;
+  flex-grow: 1;
+}
+
+.about-box__title {
+  display: block;
+  position: relative;
+  padding: 20px;
+  font-family: $cera-stencil-pro-medium;
+  font-size: 34px;
+  color: white;
+  letter-spacing: -.85px;
+  line-height: 1;
+
+  @media (min-width: $break-md) {
+    font-size: 35px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 36px; //39px
+  }
+}
