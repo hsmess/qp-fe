@@ -19,9 +19,9 @@
   display: block;
   position: relative;
 
-  font-family: $cera-stencil-pro-medium;
+  font-family: $baron-neue;
   font-size: 45px;
-  color: $red;
+  color: $primaryC;
 }
 
 .faqs__container {
@@ -55,12 +55,12 @@
   padding: 15px 20px 14px;
   cursor: pointer;
 
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
   line-height: 1;
 
   @media (hover: hover) {
     &:hover {
-      color: $red;
+      color: $primaryC;
     }
   }
 }

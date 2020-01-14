@@ -10,9 +10,9 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   siteMetadata: {
-    title: `Woolwich Works`,
-    description: `Woolwich Works new Website`,
-    author: `@rhythmhq`,
+    title: `Quarry Park Disc Golf`,
+    description: `Quarry Park Disc golf club based in Leamington Spa`,
+    author: `hsmess.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: process.env.GATSBY_SANITY_PROJECT_ID || 'u92inaqz',
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID || 'xo68m8n4',
         dataset: process.env.GATSBY_SANITY_DATASET || 'production',
         token,
         watchMode: !isProd,
@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-35854775-30',
+        trackingId: '12345678',
         head: true,
       },
     },

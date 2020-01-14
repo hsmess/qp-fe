@@ -75,7 +75,7 @@
   position: relative;
   padding-right: 20px;
 
-  font-family: $cera-stencil-pro-medium;
+  font-family: $baron-neue;
   font-size: 35px;
   line-height: 1;
 }
@@ -90,7 +90,7 @@
   display: inline-block;
   position: relative;
 
-  color: $red;
+  color: $primaryC;
   text-decoration: none;
   outline: none;
 
@@ -124,7 +124,7 @@
   }
 
   .about-item:nth-child(4n+4) & {
-    background: $red;
+    background: $primaryC;
     color: white;
   }
 
@@ -198,7 +198,7 @@
   position: relative;
   padding-right: 20px;
 
-  font-family: $cera-stencil-pro-medium;
+  font-family: $baron-neue;
   font-size: 35px;
   line-height: 1;
 }
@@ -213,7 +213,7 @@
   display: inline-block;
   position: relative;
 
-  color: $red;
+  color: $primaryC;
   text-decoration: none;
   outline: none;
 

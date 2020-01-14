@@ -43,7 +43,7 @@ function HomepageListBox({ data }) {
           <div className='homepage-list-box__subtitle'>{ data.sqft }ft<sup>2</sup> | {data.people} people</div>
         }
       </div>
-      {/*<Link to={'/venues/' + slugify(data.title)} className='venue-box__more-button'>More Information ↗</Link>*/}
+      {/*<Link to={'/venues/' + slugify(data.title)} className='news-box__more-button'>More Information ↗</Link>*/}
     </Link>
   )
 }

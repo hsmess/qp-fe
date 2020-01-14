@@ -80,8 +80,8 @@
   opacity: 0;
   max-width: 650px;
 
-  color: $red;
-  font-family: $cera-stencil-pro-medium;
+  color: $primaryC;
+  font-family: $baron-neue;
   font-size: 36px;
   text-transform: uppercase;
   text-align: left;
@@ -99,7 +99,7 @@
 .header__logo {
   display: inline-block;
   position: relative;
-  width: 150px;
+  width: 80px;
   height: auto;
 
   .header--white & {
@@ -111,18 +111,18 @@
   }
 
   .header--in-home & {
-    width: 210px;
+    width: 80px;
 
     @media (min-width: $break-md) {
-      width: 300px;
+      width: 100px;
     }
   }
 
   @media (min-width: $break-lg) {
-    width: 180px;
+    width: 80px;
 
     .header--in-home & {
-      width: 300px;
+      width: 100px;
     }
   }
 }

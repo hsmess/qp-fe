@@ -1,11 +1,11 @@
-import React, { useMemo, useRef, useState } from "react"
+import React, {useEffect, useMemo, useRef, useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import "../styles/nav.scss"
 import Header from "./header"
-import { TweenMax, Power2 } from "gsap"
+import { TweenMax, Elastic, Power2 } from "gsap"
 
 const Nav = ({ show, isInHome, setShowNav }) => {
   const [displayNav, setDisplayNav] = useState(false)
@@ -16,38 +16,35 @@ const Nav = ({ show, isInHome, setShowNav }) => {
     query HeaderQuery {
       contact: sanityContactDetails {
         email
-        phone
+        phone 
       }
 
-      venue: sanityVenueHire {
-        title
-      }
-
-      history: sanityHistoryOfTheArsenal {
+      news: sanityNewsPage {
         title
       }
 
-      community: sanityCommunity(
-        id: { eq: "b91facc9-d363-568b-b6b1-3086d969b3d4" }
-      ) {
+      theClub: sanityTheClub {
         title
       }
 
-      whatson: sanityP2Whatson(
-        id: { eq: "94896bc7-b6ae-5dfa-ba4a-89c582acdd74" }
-      ) {
+      yourVisit: sanityYourVisit
+      {
         title
       }
-      about: sanityP2About(id: { eq: "1f486191-08f3-581c-8994-690521266d41" }) {
+
+      theShop: sanityTheShop {
         title
       }
-      yourVisit: sanityP2Yourvisit(
-        id: { eq: "d51ef68b-b8ca-5676-8b2c-20d99dc282e7" }
-      ) {
+      aboutDel: sanityAboutDel{
+        title
+      }
+      aboutTheCourse: sanityAboutTheCourse{
         title
       }
     }
   `)
+
+  //(id: { eq: "b91facc9-d363-568b-b6b1-3086d969b3d4" })
 
   useMemo(() => {
     if (show) {
@@ -62,18 +59,18 @@ const Nav = ({ show, isInHome, setShowNav }) => {
       const burgers = document.querySelectorAll(".burger")
       TweenMax.set(burgers, { delay: 0.1, className: "+=burger--cross" })
 
-      // bring down red bg
+      // bring in background
       TweenMax.set(bg.current, {
         alpha: 0,
-        x: "100vw",
-        y: "-100vh",
+        x: "-100vw",
+        y: "100vh",
       })
 
-      TweenMax.to(bg.current, 0.5, {
+      TweenMax.to(bg.current, 0.1, {
         alpha: 1,
         x: 0,
         y: 0,
-        ease: Power2.easeInOut,
+        ease: Elastic.easeIn,
       })
 
       // bring on BIG links
@@ -84,14 +81,14 @@ const Nav = ({ show, isInHome, setShowNav }) => {
 
       TweenMax.staggerTo(
         ".nav__section-link",
-        0.7,
+        1.4,
         {
           delay: 0.3,
           alpha: 1,
           x: 0,
-          ease: Power2.easeOut,
+          ease: Elastic.easeOut,
         },
-        0.035
+        0.1
       )
 
       // bring on links
@@ -104,13 +101,13 @@ const Nav = ({ show, isInHome, setShowNav }) => {
         delay: 0.5,
         alpha: 1,
         x: 0,
-        ease: Power2.easeOut,
+        ease: Elastic.easeOut,
       })
     } else {
       if (!displayNav) return false
       // fade logo back in
       const logo = document.querySelectorAll(".header--in-nav .header__logo")[0]
-      TweenMax.to(logo, 0.24, { alpha: 0, ease: Power2.easeIn })
+      TweenMax.to(logo, 0.24, { alpha: 0, ease: Elastic.easeIn })
 
       // morph X into burger
       const burgers = document.querySelectorAll(".burger")
@@ -133,7 +130,7 @@ const Nav = ({ show, isInHome, setShowNav }) => {
         {
           alpha: 0,
           x: "3vw",
-          ease: Power2.easeIn,
+          ease: Elastic.easeIn,
         },
         -0.01
       )
@@ -142,7 +139,7 @@ const Nav = ({ show, isInHome, setShowNav }) => {
       TweenMax.to(links.current, 0.2, {
         alpha: 0,
         x: "3vw",
-        ease: Power2.easeIn,
+        ease: Elastic.easeIn,
       })
     }
   }, [show, displayNav])
@@ -166,40 +163,40 @@ const Nav = ({ show, isInHome, setShowNav }) => {
           <Link
             className="nav__section-link"
             onClick={handleClose}
-            to="/whats-on"
+            to="/news"
           >
-            {data.whatson.title}
+            {data.news.title}
           </Link>
           <Link
             className="nav__section-link"
             onClick={handleClose}
-            to="/your-visit"
+            to="/the-club"
+        >
+          {data.theClub.title}
+        </Link>
+          <Link
+              className="nav__section-link"
+              onClick={handleClose}
+              to="/your-visit"
           >
             {data.yourVisit.title}
           </Link>
-          <Link
-            className="nav__section-link"
-            onClick={handleClose}
-            to="/venue-hire"
-          >
-            {data.venue.title}
-          </Link>
-          <Link className="nav__section-link" onClick={handleClose} to="/about">
-            {data.about.title}
+          <Link className="nav__section-link" onClick={handleClose} to="/the-shop">
+            {data.theShop.title}
           </Link>
           <Link
-            className="nav__section-link"
-            onClick={handleClose}
-            to="/history-of-the-arsenal"
+              className="nav__section-link"
+              onClick={handleClose}
+              to="/about-derek-robins"
           >
-            {data.history.title}
+            {data.aboutDel.title}
           </Link>
           <Link
-            className="nav__section-link"
-            onClick={handleClose}
-            to="/community"
+              className="nav__section-link"
+              onClick={handleClose}
+              to="/about-the-course"
           >
-            {data.community.title}
+            {data.aboutTheCourse.title}
           </Link>
         </nav>
       </div>

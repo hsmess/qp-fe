@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/header.scss';
 import Burger from './burger';
-import WoolwichLogo from "./woolwich-logo";
+import QPLogo from "./qp-logo";
 import { Power2, TweenMax } from 'gsap/TweenMax';
 import Breadcrumb from "./breadcrumb";
 
@@ -53,7 +53,7 @@ function Header({ pageTitle, breadcrumb, isWhite, isInHome, isInNav, handleBurge
           <div className='header__main pad-sides' ref={headerInnerRef}>
             <div className='header__side'>
               <Link to="/">
-                <WoolwichLogo classes='header__logo' />
+                 <QPLogo classes='header__logo' />
               </Link>
             </div>
             <div className='header__side header__side--right'>

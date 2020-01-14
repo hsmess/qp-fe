@@ -1,0 +1,142 @@
+@import 'vars';
+
+.news-box {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 2vh;
+  flex-direction: column;
+  transition: .1s transform ease-in;
+  text-decoration: none;
+
+  @media (min-width: $break-md) {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 2%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+.news-box--home {
+  background: #c1dbc7;
+  padding: 10px;
+}
+.news-box__img {
+  display: block;
+  position: relative;
+  height: 0;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.news-box__tags {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.news-box__inner {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-box__title {
+  display: block;
+  position: relative;
+
+  font-family: $baron-neue;
+  font-size: 34px;
+  color: white;
+  letter-spacing: -.85px;
+  line-height: .9;
+
+  @media (min-width: $break-md) {
+    font-size: 35px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 39px;
+  }
+}
+
+.news-box__info {
+  display: block;
+  position: relative;
+  margin-top: 2px;
+
+  font-size: 18px;
+  color: white;
+
+  @media (min-width: $break-md) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 22px;
+  }
+}
+
+.news-box__preview-text {
+  display: block;
+  position: relative;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  @media (min-width: $break-md) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+.news-box__more-button-harness {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+}
+
+$more-button-border: .5px solid rgba(black, .1);
+$more-button-border-transparent: .5px solid transparent;
+
+.news-box__more-button {
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 10px;
+  border-top: $more-button-border;
+  border-bottom: $more-button-border-transparent;
+  border-left: $more-button-border-transparent;
+  border-right: $more-button-border;
+  outline: none;
+
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+
+  @media (hover: hover) {
+    &:hover {
+      background: white;
+      border-right: $more-button-border-transparent;
+      border-top: $more-button-border-transparent;
+    }
+  }
+}

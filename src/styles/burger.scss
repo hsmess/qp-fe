@@ -12,15 +12,15 @@
   flex-direction: column;
   overflow: hidden;
   z-index: 1;
-  transform: rotate(45deg) scale(.7) translate(14px, -25px);
+  //transform: rotate(45deg) scale(.7) translate(14px, -25px);
   cursor: pointer;
 
   .header--in-home & {
-    transform: rotate(45deg) translate(12px, -6px);
+    //transform: rotate(45deg) translate(12px, -6px);
   }
 
   @media (min-width: $break-md) {
-    transform: rotate(45deg) translate(8px, -8px);
+    //transform: rotate(45deg) translate(8px, -8px);
   }
 }
 
@@ -47,13 +47,14 @@
   .burger--cross & {
     width: 39px;
     top: 13px;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
   }
 }
 
 .burger__line--2 {
   .burger--cross & {
     width: 39px;
+    transform: rotate(-45deg);
   }
 }
 
@@ -61,7 +62,7 @@
   .burger--cross & {
     width: 39px;
     top: -13px;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
   }
 }
 

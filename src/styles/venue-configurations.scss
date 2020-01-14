@@ -16,7 +16,7 @@
   display: block;
   position: relative;
 
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
   font-size: 23px;
   color: $pink;
 
@@ -43,7 +43,7 @@
   min-width: 50%;
   flex-grow: 1;
 
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
   line-height: 1;
 
   @media (min-width: $break-640) {
@@ -110,7 +110,7 @@
   position: relative;
 
   font-size: 22px;
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
 }
 
 @media print{

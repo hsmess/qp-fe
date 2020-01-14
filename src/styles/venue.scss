@@ -30,8 +30,8 @@
   display: block;
   position: relative;
 
-  color: $red;
-  font-family: $cera-stencil-pro-medium;
+  color: $primaryC;
+  font-family: $baron-neue;
   font-size: 28px;
   text-transform: uppercase;
   text-align: left;
@@ -46,7 +46,7 @@
   display: block;
   position: relative;
   margin-top: 3px;
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
 
   @media (min-width: $break-lg) {
     //font-size: 20px;
@@ -107,7 +107,7 @@
   border-bottom: $feint-border;
   margin-bottom: 15px;
 
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
   font-size: 21px;
   color: $pink;
 
@@ -129,14 +129,14 @@
 .venue-contact__title {
   display: block;
   position: relative;
-  font-family: $cera-pro-medium;
+  font-family: $baron-neue;
 }
 
 .venue-contact__link {
   display: block;
   position: relative;
   margin-top: 5px;
-  color: $red;
+  color: $primaryC;
   text-decoration: none;
 
   @media (hover: hover) {
@@ -175,7 +175,7 @@
   display: block;
   position: relative;
 
-  font-family: $cera-stencil-pro-medium;
+  font-family: $baron-neue;
   font-size: 30px;
   color: black;
 
@@ -225,8 +225,8 @@
     display:block;
     position: relative;
 
-    color: $red;
-    font-family: $cera-stencil-pro-medium;
+    color: $primaryC;
+    font-family: $baron-neue;
     font-size: 50px;
     text-transform: uppercase;
     text-align: left;

@@ -25,9 +25,7 @@
   left: -150vw;
   width: 300vw;
   height: 400vh;
-  transform-origin: 50% 100%;
-  transform: rotate(45deg);
-  background: $red;
+  background: $primaryC;
 }
 
 .nav__section-link {
@@ -36,10 +34,10 @@
   margin-top: 2vh;
   margin-bottom: 2.5vh;
 
-  font-family: $cera-stencil-pro-medium;
-  font-size: 10vw;
+  font-family: $baron-neue;
+  font-size: 7vw;
   color: white;
-  line-height: .9;
+  line-height: .8;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: -2px;
