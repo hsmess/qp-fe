@@ -46,3 +46,11 @@ $baron-neue-black: 'Baron Neue Black';
   font-weight: normal;
   src: local('Baron Neue Black'), url('../fonts/Baron Neue Black.woff') format('woff');
 }
+
+$moderne-sans: 'Moderne Sans';
+@font-face{
+  font-family: 'Moderne Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Moderne Sans'), url('../fonts/Moderne-Sans-Font.woff') format('woff');
+}

@@ -177,7 +177,7 @@ const Nav = ({ show, isInHome, setShowNav }) => {
           <Link
               className="nav__section-link"
               onClick={handleClose}
-              to="/your-visit"
+              to="/visit-us"
           >
             {data.yourVisit.title}
           </Link>

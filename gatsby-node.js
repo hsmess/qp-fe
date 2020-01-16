@@ -6,16 +6,16 @@
 
 // You can delete this file if you're not using it
 
-async function createHistoryPages (graphql, actions, reporter) {
+async function createNewsPages (graphql, actions, reporter) {
     const {createPage} = actions
     const result = await graphql(`
    {
-     allSanityStory {
+     allSanityNews {
         edges {
           node {
-            id
-            title
-            }
+                id
+                title
+                }
             }
         }
         }
@@ -23,19 +23,19 @@ async function createHistoryPages (graphql, actions, reporter) {
 
     if (result.errors) throw result.errors
 
-    const storyEdges = (result.data.allSanityStory || {}).edges || []
+    const storyEdges = (result.data.allSanityNews || {}).edges || []
     storyEdges
         .forEach(edge => {
             // console.log(edge.node);
             const id = edge.node.id
-            const slug = slugify(edge.node.title)
-            const path = `/story/${slug}/`
+            const slug = slugify(edge.node.title,edge.node.id)
+            const path = `/news/${slug}/`
 
-            reporter.info(`Creating story page: ${path}`)
+            reporter.info(`Creating news page: ${path}`)
 
             createPage({
                 path,
-                component: require.resolve('./src/templates/story.js'),
+                component: require.resolve('./src/templates/news.js'),
                 context: {id}
             })
         })
@@ -65,7 +65,7 @@ function slugify(string, id = null) {
 }
 
 exports.createPages = async ({graphql, actions, reporter}) => {
-    // await createStoryPages(graphql, actions, reporter),
+    await createNewsPages(graphql, actions, reporter)
     // await createHistoryPages(graphql, actions, reporter),
     // await createVenuePages(graphql, actions, reporter),
     // await createEventPages(graphql, actions, reporter),

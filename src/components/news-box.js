@@ -11,7 +11,7 @@ function NewsBox({ data }) {
   }, [data]);
   return (
 
-    <Link to={'/news/' + slugify(data.node.title)} className={`news-box news-box--home`}>
+    <Link to={'/news/' + slugify(data.node.title,data.node.id)} className={`news-box news-box--home`}>
       <div className='news-box__img-harness'>
         <Img className='news-box__img' fluid={data.node.primaryImage.asset.fluid}/>
       </div>
@@ -21,7 +21,9 @@ function NewsBox({ data }) {
           </div>
         <div>
           <div className='news-box__info'>
-              {data.node.previewText}
+              <p>
+                  {data.node.previewText}
+              </p>
               <div className='news-box__more-button-harness'>
                   <Link className='button generic-page__button' to={'news/' + slugify(data.node.title,data.node.id)}>Read More ↗</Link>
               </div>

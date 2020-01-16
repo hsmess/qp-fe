@@ -73,6 +73,13 @@ const IndexPage = ({ data }) => {
                     <PortableText blocks={data.homepage._rawOverlayText2}/>
                 </div>
             </div>
+            <div className='strip quicklinks'>
+                <div className='strip__middle pad-sides quicklinks__inner'>
+                    <div><Link className='quicklinks__link' to='/visit-us'>Visit Us</Link></div>
+                    <div><Link className='quicklinks__link' to='/the-club'>Join The Club</Link></div>
+                    <div><Link className='quicklinks__link' to='/the-course'>About The Course</Link></div>
+                </div>
+            </div>
         </div>
         <div className='full-bleed-strip-no-height index__news-section'>
             <div className='strip__middle pad-sides'>
@@ -81,6 +88,9 @@ const IndexPage = ({ data }) => {
                 {/*        <NewsBox data={story}></NewsBox>*/}
                 {/*    </div>*/}
                 {/*})}*/}
+                <div className='index__title pb-3'>
+                    Latest News
+                </div>
                 {
                     data.threeStories.edges.map((story, idx) => {
                         return (

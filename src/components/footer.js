@@ -79,7 +79,7 @@ function Footer ({isInHome}) {
             <Link className='footer__section-link' to='/'>Home</Link>
             <Link className='footer__section-link' to='/news'>{data.news.title}</Link>
             <Link className='footer__section-link' to='/the-club'>{data.theClub.title}</Link>
-            <Link className='footer__section-link' to='/your-visit'>{data.yourVisit.title}</Link>
+            <Link className='footer__section-link' to='/visit-us'>{data.yourVisit.title}</Link>
             <Link className='footer__section-link' to='/the-shop'>{data.theShop.title}</Link>
             <Link className='footer__section-link' to='/about-the-course'>{data.aboutTheCourse.title}</Link>
           </div>
@@ -94,13 +94,17 @@ function Footer ({isInHome}) {
             }
 
             <div className='footer__address'>
-              {data.contact.address}<br/>
-              {data.contact.street}<br/>
-              {data.contact.city}<br/>
-              {data.contact.postcode}<br/>
+              <p>
+                {data.contact.address}<br/>
+                {data.contact.street}<br/>
+                {data.contact.city}<br/>
+                {data.contact.postcode}<br/>
+              </p>
             </div>
-            <a className='footer__contact-link footer__google-maps-link' target='_blank' href={data.footer.googleMapsUrl}>Open
-              in Google Maps ↗</a>
+            <p>
+              <a className='footer__contact-link footer__google-maps-link' target='_blank' href={data.footer.googleMapsUrl}>Open
+                in Google Maps ↗</a>
+            </p>
 
             <div className='footer__social'>
               <SocialButton classes='footer__social-button footer__social-button--instagram'
@@ -114,11 +118,12 @@ function Footer ({isInHome}) {
 
           <div className='footer-content__right'>
             <div>
-
-              {/*<Link className='footer__contact-link' to='/cookies'>{data.legal.footerTitle}</Link>*/}
+              <p>
                 <Link className='footer__contact-link' to='/cookies'>{data.cookies.footerTitle}</Link>
                 <Link className='footer__contact-link' to='/privacy'>{data.privacy.footerTitle}</Link>
                 <Link className='footer__contact-link' to='/terms'>{data.terms.footerTitle}</Link>
+              </p>
+              {/*<Link className='footer__contact-link' to='/cookies'>{data.legal.footerTitle}</Link>*/}
               {/*<Link className='footer__contact-link' to='/legal'>Legal</Link>*/}
             </div>
           </div>
