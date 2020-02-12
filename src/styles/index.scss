@@ -70,6 +70,10 @@
   @media (min-width: $break-md) {
     bottom: 40px;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .quicklinks__inner {
